@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+<!--  -->
+<!-- LAYOUT_HEADER -->
+<!--  -->
+
+{% block content %}
+        
+    <header>
+            <div class="banner">
+                <div>
+                    <img class="logo" src="{% static 'imgs/logo.png' %}" alt="logo Nexus">
+                </div>
+                <!-- <div>
+                    <h1>NEXUS - UFABC</h1>
+                </div> -->
+            </div>  
+    </header>
+    <main>
+        <div class="nexus">
+            <h2>NEXUS</h2>
+            <p>Realizamos trabalhos de pesquisa sobre a interseção de desafios emergentes (por exemplo, engenharia de sistemas complexos, sistemas de software aplicados) e questões sociais nas comunidades e organizações (por exemplo, sociedade e transformação de negócios). Para atingir esses objetivos, o grupo possui três linhas de pesquisa principais: Engenharia de Sistemas Complexos (CSE), Sistema de Software Aplicado (ASS) e Transformação de Sociedade e Negócios (SBT).</p>
+        </div>
+    </main>
+
+    <!--  -->
+
+    <div id="grad-bottom"></div>
+    <div class="contato">
+        <div>
+            <h3>QUER SABER MAIS SOBRE?</h3>
+            <p>Entre em contato, esclareça eventuais dúvidas.<br> Escreva pra gente! É rápido e fácil!</p>
+        </div>
+        <div class="but">
+            <a href="{% url 'contato' %}"><button class="saiba-mais" >Contato</button></a>
+        </div>
+    </div>
+
+{% endblock %}
+
+<!--  -->
+<!-- LAYOUT_FOOTER -->
+<!--  -->

@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+<!--  -->
+<!-- LAYOUT_HEADER -->
+<!--  -->
+
+{% block content %}
+
+        <div class="header-div">
+                <div>
+                    <div>
+                        <img class="logo-contato" src="{% static 'imgs/logo.png' %}" alt="logo GA">
+                    </div>
+                </div>  
+        </div>
+
+        <div class="mainWrap">
+                <h2>Seepch Recognition</h2>
+                <div>
+                        <textarea id="textarea" rows="10" cols="80" disabled="true" style="resize: none;" ></textarea>
+                        <!-- <br> -->
+                        <button class="click-to" id="buttonSpeech" onclick="toggleStartStop()" ></button>
+                        <button class="click-to" id="buttonListen" onclick="listen()" >Clique para Ouvir</button>
+                </div>
+        </div>
+
+{% endblock %}
+
+<!--  -->
+<!-- LAYOUT_FOOTER -->
+<!--  -->

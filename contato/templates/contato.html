@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+<!--  -->
+<!-- LAYOUT_HEADER -->
+<!--  -->
+
+{% block content %}
+
+        <div class="header-div">
+                <div>
+                    <div>
+                        <img class="logo-contato" src="{% static 'imgs/logo.png' %}" alt="logo GA">
+                    </div>
+                    <!-- <div>
+                        <h1>CONTATO</h1>
+                    </div> -->
+                </div>  
+        </div>
+
+        <div class="divContatoForm">
+                <form action="." method="POST">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button class="btn-contato">Enviar</button>
+                </form>
+        </div>
+
+{% endblock %}
+
+<!--  -->
+<!-- LAYOUT_FOOTER -->
+<!--  -->

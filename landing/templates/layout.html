@@ -1,0 +1,81 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>TTS</title>
+        <link defer rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link defer href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+        <script defer src="{% static 'js/script.js' %}"></script>
+</head>
+<body>
+    <nav>
+        <div class="font-nav">
+            <a href="{% url 'home' %}">HOME</a>  
+        </div>
+        <div class="font-nav">
+            <a href="{% url 'text_to_speech' %}">TEXT TO SPEECH</a>  
+        </div>
+        <div class="font-nav">
+            <a href="{% url 'speech_to_text' %}">SPEECH TO TEXT</a>  
+        </div>
+        <div class="font-nav">
+            <a href="{% url 'file_to_speech' %}">FILE TO SPEECH</a>  
+        </div>
+        <div class="font-nav">
+            <a href="{% url 'contato' %}">CONTATO</a>  
+        </div>
+    </nav>
+    <div class="grid">
+
+
+
+        <!--  -->
+        {% block content %}
+        <!-- CONTENT -->
+        {% endblock %}
+        <!--  -->
+
+        <div class="infos">
+            <div class="infos-redes">
+                <h3>Redes Sociais</h3>
+                <div>
+                    <a href="https://www.facebook.com/" target="_blank">
+                    <div class="icons">
+                        <img src="{% static 'imgs/facebook.png' %}" alt="Facebook">
+                    </div>
+                    </a>
+                    <div class="entre-icons"></div>
+                    <a href="https://www.instagram.com/" target="_blank">
+                    <div class="icons">
+                        <img src="{% static 'imgs/instagram.png' %}" alt="Instagram">
+                    </div>
+                    </a>
+                </div>
+            </div>
+            <div class="infos-adress">
+                <div>
+                    <h4>Nexus - <a target="_blank">pesquisa.ufabc.edu.br/nexus</a></h4>
+                </div>
+                <div>
+                    <p>Endereço: Av. dos Estados, 5001 - Bangú<br>Santo André - SP, 09210-580 <br>Universidade Federal do ABC - Campus Santo André</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-space">
+                <a href="{% url 'home' %}">Home</a>
+                <a href="{% url 'text_to_speech' %}">Text to Speech</a>
+                <a href="{% url 'speech_to_text' %}">Speech to Text</a>
+                <a href="{% url 'file_to_speech' %}">File to Speech</a>
+                <a href="{% url 'contato' %}">Contato</a>
+            </div>
+        </footer>
+
+    </div>
+</body>
+</html>
