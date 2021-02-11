@@ -1,0 +1,1 @@
+# Project usign the SpeechRecognition webKit structured with Django framework.
