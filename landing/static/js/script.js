@@ -14,10 +14,14 @@ let rateValue = selector("#rateValue");
 let pitch = selector("#pitch");
 let pitchValue = selector("#pitchValue");
 
+let speaker = "";
+
 let listenRate = 1;
 let listenPitch = 1;
+let listenLang = "pt-BR";
 
 if(selector("#buttonUploadTextFile")) updateFile = selector("#buttonUploadTextFile");
+if(selector("#speaker")) speaker = selector("#speaker");
 
 recognition.onresult = (event) => {
         for (let i = event.resultIndex; i < event.results.length; ++i) {
@@ -48,7 +52,7 @@ const toggleStartStop = () => {
 const listen = (txtAreaName) => {
         let hear = new SpeechSynthesisUtterance;
 
-        hear.lang = "pt-BR";
+        hear.lang = listenLang;
         hear.rate = listenRate;
         hear.pitch = listenPitch;
         hear.text = selector(`#${txtAreaName}`).value;
@@ -83,6 +87,10 @@ rate.onchange = () => {
 pitch.onchange = () => {
         pitchValue.innerHTML = `Tonalidade ${pitch.value}`;
         listenPitch = pitch.value;
+}
+
+speaker.onchange = () => {
+        listenLang = speaker.value;
 }
 
 

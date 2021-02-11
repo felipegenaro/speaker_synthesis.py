@@ -19,11 +19,20 @@
                 <h2>Seepch Recognition</h2>
                 <div>
                         <textarea id="textarea-stt" rows="10" cols="80" disabled="true" style="resize: none;" ></textarea>
-                        <!-- <br> -->
                         <button class="click-to" id="buttonSpeech" onclick="toggleStartStop()" ></button>
+
                         <h2>Reprodução</h2>
+
                         <label id="rateValue">Velocidade 1</label> <input id="rate" type="range" min="0.1" max="2" step="0.1" value="1" />
                         <label id="pitchValue">Tonalidade 1</label> <input id="pitch" type="range" min="0.1" max="2" step="0.1" value="1" />
+
+                        <!-- <select class="speaker" name="selectPerson" id="speaker">
+                                <option value="pt-BR" selected>Português</option>
+                                <option value="en-CA">Inglês</option>
+                                <option value="fr-CA">Francês</option>
+                                <option value="es-ES">Espanhol</option>
+                        </select> -->
+
                         <button class="click-to" id="buttonListen" onclick="listen('textarea-stt')" >Clique para Ouvir</button>
                 </div>
         </div>
