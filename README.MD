@@ -11,6 +11,8 @@
 
 <h3 align="center"><a href="https://speaker-synthesis.herokuapp.com">See Demo</a></h3>
 
+###### this webKit only works with Google Chrome and MS Edge
+
 ---
 
 ### Commands
