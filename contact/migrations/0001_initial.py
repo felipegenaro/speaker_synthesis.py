@@ -12,13 +12,13 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Contato',
+            name='Contact',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('nome', models.CharField(blank=True, max_length=40)),
+                ('name', models.CharField(blank=True, max_length=40)),
                 ('email', models.EmailField(blank=True, max_length=254)),
-                ('assunto', models.CharField(choices=[('SG', 'Sugestões'), ('CT', 'Críticas'), ('DV', 'Diverso')], default='SG', max_length=2)),
-                ('descricao', models.TextField(max_length=240)),
+                ('subject', models.CharField(choices=[('SG', 'Sugestionões'), ('CT', 'Críticas'), ('DV', 'Diverse')], default='SG', max_length=2)),
+                ('description', models.TextField(max_length=240)),
             ],
         ),
     ]

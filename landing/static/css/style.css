@@ -1,6 +1,6 @@
 body {
         margin: 0px;
-        font-family: 'Dosis', sans-serif;
+        font-family: 'Arial', sans-serif;
         font-size: 2vw;
         width: 100%;
         /* background-color: rgb(245, 255, 238); */
@@ -11,18 +11,20 @@ body {
         display: block;
         padding-top: 50px;
 }
-.header-div{
+
+.header-div {
         /* height: 250px; */
         padding-top: 50px;
         /* padding-bottom: 50px; */
 }
+
 .header-div div{
         display: flex;
         align-items: center;
         justify-content: space-around;
 }
 
-.header-div h1{
+.header-div h1 {
         font-size: 3.5em;
 }
     
@@ -93,6 +95,7 @@ header div {
         flex-wrap: wrap;
         padding-bottom: 30px;
 }
+
 .nexus h2 {
         padding-top: 20px;
         margin-top: 0px;
@@ -102,6 +105,7 @@ header div {
         color: rgba(0, 0, 0, 0.800);
         /* text-shadow: 1.5px 1.5px rgb(53, 53, 53); */
 }
+
 .nexus p {
         margin-top: 10px;
         margin-left: 100px;
@@ -114,17 +118,19 @@ header div {
         /* text-shadow: 1.5px 1.5px rgb(53, 53, 53); */
 }
 
-.contato {
+.contact {
         display: flex;
         align-items: center;
         justify-content: center;
         height: 200px;
 }
-.contato h3 {
+
+.contact h3 {
         font-weight: bolder;
         font-size: 27px;
 }
-.contato p {
+
+.contact p {
         font-weight: bold;
         color: #302f2f;
 }
@@ -160,6 +166,7 @@ header div {
         align-items: center;
         justify-content: space-evenly;
 }
+
 .infos p {
         color: rgb(226, 226, 226);
         font-size: 17px;
@@ -179,6 +186,7 @@ header div {
         margin: 0px;
         font-size: 27px;
 }
+
 .infos-redes p {
         text-shadow: 0.2px 0.2px rgb(37, 37, 37);
         color: rgb(226, 226, 226);
@@ -191,13 +199,14 @@ header div {
         margin: 0px;
         font-size: 20px;
 }
+
 .infos-adress p {
         text-shadow: 0.2px 0.2px rgb(37, 37, 37);
         color: rgb(226, 226, 226);
         margin-top: 10px;
 }
 
-.btn-contato {
+.btn-contact {
         border-radius: 5px;
         border: 1px solid black;
         padding: 7px 15px;
@@ -206,7 +215,7 @@ header div {
         background-color: rgba(255, 255, 255, 0.774);
         color: black;
 }
-.btn-contato:hover {
+.btn-contact:hover {
         color: rgb(34, 138, 156);
         border: 1px solid rgb(34, 138, 156);
         background-color: rgb(255, 255, 255);
@@ -247,6 +256,7 @@ footer {
         /* margin-top: 10px; */
         /* margin-right: 10px; */
 }
+
 .icons:hover {
         cursor: pointer;
         transition: 0.8s;
@@ -276,6 +286,7 @@ footer {
         background-color: rgba(255, 255, 255, 0);
         color: rgb(34, 138, 156);
 }
+
 .click-to:hover {
         color: rgb(255, 255, 255);
         background-color: rgba(34, 138, 156, 1);
@@ -290,12 +301,13 @@ footer {
         background-color: rgba(255, 255, 255, 0);
         color: rgb(34, 138, 156);
 }
+
 .saiba-mais:hover {
         color: rgb(255, 255, 255);
         background-color: rgba(34, 138, 156, 1);
 }
 
-.divContatoForm{
+.divContactForm {
         /* background-image: linear-gradient(to right, rgba(16, 182, 65, 0.9), rgba(15, 155, 61, 0.7)); */
         display: flex;
         align-items: flex-start;
@@ -303,7 +315,7 @@ footer {
         padding-bottom: 50px;
 }
 
-.divContatoForm p{
+.divContactForm p {
         display: flex;
         align-items: center;
         color: rgb(0, 0, 0);
@@ -312,16 +324,16 @@ footer {
         width: 650px;
 }
 
-.divContatoForm button{
+.divContactForm button {
         margin-left: 250px;
         margin-top: 10px;
         font-size: 35px;
         font-weight: normal;
         border-radius: 15px;
-        font-family: 'Dosis', sans-serif;
+        font-family: 'Arial', sans-serif;
 }
 
-.divContatoForm input{
+.divContactForm input {
         margin-left: 60px;
         padding: 12px;
         border-radius: 12px;
@@ -329,7 +341,7 @@ footer {
         font-size: 14pt;
 }
 
-.divContatoForm textarea {
+.divContactForm textarea {
         margin-left: 15px;
         resize: none;
         padding: 12px;
@@ -339,7 +351,7 @@ footer {
         height: 50px;
 }
 
-.divContatoForm select {
+.divContactForm select {
         margin-left: 35px;
         font-size: 25px;
         padding: 12px;
@@ -353,4 +365,9 @@ footer {
         padding: 12px;
         border-radius: 12px;
         /* background-color: green; */
+}
+
+a {
+        color: lightblue;
+        text-decoration: none; /* no underline */
 }

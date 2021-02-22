@@ -3,7 +3,7 @@ const selector = selector => document.querySelector(selector);
 let recognizing;
 let recognition = new window.webkitSpeechRecognition();
 recognition.continuous = true;
-recognition.lang = "pt-BR";
+recognition.lang = "en-CA";
 
 let uploadFile = "";
 let documentReader = new FileReader();
@@ -18,7 +18,7 @@ let speaker = "";
 
 let listenRate = 1;
 let listenPitch = 1;
-let listenLang = "pt-BR";
+let listenLang = "en-CA";
 
 if(selector("#buttonUploadTextFile")) updateFile = selector("#buttonUploadTextFile");
 if(selector("#speaker")) speaker = selector("#speaker");
@@ -33,7 +33,7 @@ recognition.onresult = (event) => {
 
 const reset = () => {
         recognizing = false;
-        selector("#buttonSpeech").innerHTML = "Click para Falar";
+        selector("#buttonSpeech").innerHTML = "Say";
 }
 
 const toggleStartStop = () => {
@@ -44,7 +44,7 @@ const toggleStartStop = () => {
         } else {
                 recognition.start();
                 recognizing = true;
-                selector("#buttonSpeech").innerHTML = "Click para Parar";
+                selector("#buttonSpeech").innerHTML = "Stop";
                 selector("#textarea-stt").value = "";
         }
 }
@@ -66,7 +66,7 @@ uploadFile.onchange = () => {
         documentReader.readAsText(file);        
 
         let txtArea = selector("#textarea-tts");
-        txtArea.value = "Aguarde Enquanto seu Arquivo é carregado...";
+        txtArea.value = "Waiting until your file is loadded...";
 }
 
 documentReader.onload = (e) => {
@@ -80,12 +80,12 @@ documentReader.onload = (e) => {
 };
 
 rate.onchange = () => {
-        rateValue.innerHTML = `Velocidade ${rate.value}`;
+        rateValue.innerHTML = `Speed ${rate.value}`;
         listenRate = rate.value;
 }
 
 pitch.onchange = () => {
-        pitchValue.innerHTML = `Tonalidade ${pitch.value}`;
+        pitchValue.innerHTML = `Pitch ${pitch.value}`;
         listenPitch = pitch.value;
 }
 

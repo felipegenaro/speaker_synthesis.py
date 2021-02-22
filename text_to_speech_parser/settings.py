@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'landing',
-    'contato',
+    'contact',
     'text_to_speech',
     'speech_to_text',
     'file_to_speech',

@@ -6,9 +6,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>TTS</title>
+        <title>Speaker Synthesis</title>
         <link defer rel="stylesheet" href="{% static 'css/style.css' %}">
-        <link defer href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
         <script defer src="{% static 'js/script.js' %}"></script>
 </head>
 <body>
@@ -26,7 +25,7 @@
             <a href="{% url 'file_to_speech' %}">FILE TO SPEECH</a>  
         </div> -->
         <div class="font-nav">
-            <a href="{% url 'contato' %}">CONTATO</a>  
+            <a href="{% url 'contact' %}">CONTACT</a>  
         </div>
     </nav>
     <div class="grid">
@@ -41,7 +40,7 @@
 
         <div class="infos">
             <div class="infos-redes">
-                <h3>Redes Sociais</h3>
+                <h3>Social Media</h3>
                 <div>
                     <a href="https://www.facebook.com/" target="_blank">
                     <div class="icons">
@@ -58,10 +57,10 @@
             </div>
             <div class="infos-adress">
                 <div>
-                    <h4>Nexus - <a target="_blank">pesquisa.ufabc.edu.br/nexus</a></h4>
+                    <h4>Web_Speech_API - <a target="_blank" href="developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API" >developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API</a></h4>
                 </div>
                 <div>
-                    <p>Endereço: Av. dos Estados, 5001 - Bangú<br>Santo André - SP, 09210-580 <br>Universidade Federal do ABC - Campus Santo André</p>
+                    <p>Address: Some Street, 5001 - Lorem<br>Ipsum - SIT, 092 580 <br>Amet - Lorem Ipsum</p>
                 </div>
             </div>
         </div>
@@ -72,7 +71,7 @@
                 <a href="{% url 'text_to_speech' %}">Text to Speech</a>
                 <a href="{% url 'speech_to_text' %}">Speech to Text</a>
                 <!-- <a href="{% url 'file_to_speech' %}">File to Speech</a> -->
-                <a href="{% url 'contato' %}">Contato</a>
+                <a href="{% url 'contact' %}">Contact</a>
             </div>
         </footer>
 

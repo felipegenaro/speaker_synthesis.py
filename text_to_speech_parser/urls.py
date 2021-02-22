@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from landing.views import render_index
-from contato.views import adicionar_contato
+from contact.views import adicionar_contact
 from text_to_speech.views import tts_index
 from speech_to_text.views import stt_index
 from file_to_speech.views import fts_index
@@ -25,7 +25,7 @@ from file_to_speech.views import fts_index
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', render_index, name='home'),
-    path('contato/', adicionar_contato, name='contato'),
+    path('contact/', adicionar_contact, name='contact'),
     path('text_to_speech/', tts_index, name='text_to_speech'),
     path('speech_to_text/', stt_index, name='speech_to_text'),
     path('file_to_speech/', fts_index, name='file_to_speech'),
