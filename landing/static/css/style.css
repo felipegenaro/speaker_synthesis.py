@@ -1,4 +1,5 @@
 body {
+        zoom: 75%;
         margin: 0px;
         font-family: 'Arial', sans-serif;
         font-size: 2vw;
@@ -370,4 +371,13 @@ footer {
 a {
         color: white;
         text-decoration: none; /* no underline */
+}
+
+.flexButtons {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        justify-content: space-around !important;
+        align-items: stretch !important;
+        align-content: space-around !important;
 }

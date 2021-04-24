@@ -33,7 +33,7 @@ recognition.onresult = (event) => {
 
 const reset = () => {
         recognizing = false;
-        selector("#buttonSpeech").innerHTML = "Say";
+        selector("#buttonSpeech").innerHTML = "Record";
 }
 
 const toggleStartStop = () => {
@@ -44,20 +44,32 @@ const toggleStartStop = () => {
         } else {
                 recognition.start();
                 recognizing = true;
-                selector("#buttonSpeech").innerHTML = "Stop";
+                selector("#buttonSpeech").innerHTML = "Recording... Click to Stop.";
                 selector("#textarea-stt").value = "";
         }
 }
 
 const listen = (txtAreaName) => {
-        let hear = new SpeechSynthesisUtterance;
+        if(speechSynthesis.speaking || speechSynthesis.paused) {
+                speechSynthesis.resume();
+        } else {
+                speechSynthesis.cancel();
+                let hear = new SpeechSynthesisUtterance;
 
-        hear.lang = listenLang;
-        hear.rate = listenRate;
-        hear.pitch = listenPitch;
-        hear.text = selector(`#${txtAreaName}`).value;
-
-        speechSynthesis.speak(hear);
+                let txtArea = selector(`#${txtAreaName}`);
+                
+                hear.lang = listenLang;
+                hear.rate = listenRate;
+                hear.pitch = listenPitch;
+                
+                if(txtArea.value.substring(txtArea.selectionStart, txtArea.selectionEnd)) {
+                        hear.text = txtArea.value.substring(txtArea.selectionStart, txtArea.selectionEnd);
+                } else {
+                        hear.text = txtArea.value;
+                }
+        
+                speechSynthesis.speak(hear);
+        }
 }
 
 uploadFile.onchange = () => {
@@ -66,7 +78,7 @@ uploadFile.onchange = () => {
         documentReader.readAsText(file);        
 
         let txtArea = selector("#textarea-tts");
-        txtArea.value = "Waiting until your file is loadded...";
+        txtArea.value = "Waiting until your file is completely loadded...";
 }
 
 documentReader.onload = (e) => {
@@ -75,7 +87,7 @@ documentReader.onload = (e) => {
         try {
                 txtArea.value = e.target.result;
         } catch(e) {
-                alert("Somethin went Wrong!" + e.message);
+                alert("Something went Wrong!" + e.message);
         } 
 };
 
